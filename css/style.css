@@ -1,17 +1,16 @@
 /* =========================================================
  * FONT-FACE
  * ========================================================*/
-@font-face {
+/*@font-face {
   font-family: GothamRounded;
   src: url(../fonts/GothamRounded-Medium.otf) format("otf");
   src: local("GothamRounded-Medium"), url(../fonts/GothamRounded-Medium.otf) format("truetype");
-}
+}*/
 /* Note: Have override Bootstrap's font for GothamRounded */
 
 /* padding bottom for bootstrap fixed footer */
 body {
   overflow-x: hidden;
-  padding-bottom: 50px;
 }
 
 
@@ -41,16 +40,6 @@ body {
   border: 2px solid white;
   border-radius: 100px;
 }
-
-.description > h1{
-  font-size: 80px;
-  color: #A5CE39;
-  letter-spacing: 20px;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 100px;
-  margin: 50px 10px 10px 20px;
-}
 .description > p {
   font-size: 20px;
   color: white;
@@ -65,12 +54,14 @@ body {
   text-transform: uppercase;
   line-height: 0;
   margin: 20px 0 20px 0;
-  padding: 40px 0 135px 0;
+  padding-top: 50px;
 }
 .social-icons {
   display: flex;
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
+  margin: 0 auto;
+  padding: 50px;
 }
 .social-icons i {
   color: white;
@@ -86,11 +77,11 @@ body {
 }
 
 /* =========================================================
-* MAIN CONTENT / ABOUT ME
+* MAIN CONTENT / ABOUT / MISSION
 * ========================================================*/
- .main_bg {
+.main_bg {
   width: 100%;
-  height: 950px;
+  height: 880px;
   background: url(../images/stars.jpg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -98,24 +89,24 @@ body {
   margin-bottom: 0px;
   margin: 0 auto;
  }
- div.about{
-   float: left;
-   margin: 0 auto;
-   padding: 15px 0 0 50px;
-   width: 48%;
-   height: auto;
-   color: white;
+div.about{
+  float: left;
+  margin: 0 auto;
+  padding: 15px 0 0 50px;
+  width: 48%;
+  height: auto;
+  color: white;
  }
- div h1 {
-   color: #A5CE39;
+div h1 {
+  color: #A5CE39;
  }
- div.mission {
-   float: right;
-   margin: 0 auto;
-   padding: 15px 50px 0 0;
-   width: 48%;
-   height: auto;
-   color: white;
+div.mission {
+  float: right;
+  margin: 0 auto;
+  padding: 15px 50px 0 0;
+  width: 48%;
+  height: auto;
+  color: white;
  }
 
 
@@ -123,7 +114,23 @@ body {
  * FOOTER
  * ========================================================*/
 /* Bootstrap <nav class="navbar navbar-default navbar-fixed-bottom"> */
-
+#footer {
+  text-align: center;
+  padding: 15px;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: bold;
+  color: #c9c9c9;
+}
+#footer a {
+  color: #A5CE39;
+  padding: 20px;
+  margin: 0 auto;
+}
+#footer a:hover {
+  text-decoration: none;
+  color: #2fbf03;
+}
 
 /* =========================================================
  * RESPONSIVE
@@ -132,13 +139,11 @@ body {
  * ========================================================*/
 @media screen and (max-width: 768px) {
     .main_bg {
-      height: 100%;
+      height: 730px;
       width: auto;
     }
-  .description h1 {
-      font-size: 50px;
-      line-height: 1;
-      letter-spacing: 10px;
+  .description img {
+      width: 95%;
   }
   .description > p {
     font-size: 15px;
@@ -148,20 +153,10 @@ body {
     letter-spacing: 5px;
     padding: 15px 0 20px 0;
   }
-  div.about {
-    width: 100%;
-    height: auto;
-    display: block;
-    float: none;
-    padding: 10px 2px 2px 10px;
-    margin: 0 auto;
-  }
-  div.mission {
-    width: 100%;
-    height: auto;
-    display: block;
-    float: none;
-    padding: 10px 2px 2px 10px;
-    margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .main_bg {
+    height: 1000px;
+    width: auto;
   }
 }
